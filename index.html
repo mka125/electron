@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naheed Beauty Store - Premium Cosmetics & Beauty Products</title>
+    <title>LibirthStore - Premium Chargers & Electronics</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,25 +13,25 @@
         }
         
         :root {
-            --primary-pink: #e91e63;
-            --light-pink: #fce4ec;
-            --rose-gold: #e8b4b8;
-            --dark-pink: #ad1457;
+            --primary-gold: #d4af37;
+            --light-gold: #fef9e6;
+            --dark-gold: #b8960c;
+            --dark: #1a1a2e;
             --cream: #fdf7f0;
         }
         
-        .bg-primary { background-color: var(--primary-pink); }
-        .bg-light-pink { background-color: var(--light-pink); }
-        .bg-rose-gold { background-color: var(--rose-gold); }
+        .bg-primary { background-color: var(--primary-gold); }
+        .bg-light-gold { background-color: var(--light-gold); }
+        .bg-dark { background-color: var(--dark); }
         .bg-cream { background-color: var(--cream); }
-        .text-primary { color: var(--primary-pink); }
-        .text-dark-pink { color: var(--dark-pink); }
+        .text-primary { color: var(--primary-gold); }
+        .text-dark { color: var(--dark); }
         
         .page-section { display: none; }
         .page-section.active { display: block; }
         
         .hero-gradient {
-            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--rose-gold) 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary-gold) 100%);
         }
         
         .product-card {
@@ -41,7 +41,7 @@
         
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.15);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
         }
         
         .nav-link {
@@ -56,7 +56,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-pink);
+            background: var(--primary-gold);
             transition: width 0.3s ease;
         }
         
@@ -66,13 +66,13 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--dark-pink) 100%);
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
             transition: all 0.3s ease;
         }
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
         }
         
         .modal {
@@ -108,7 +108,7 @@
         
         .category-filter:hover,
         .category-filter.active {
-            background-color: var(--primary-pink);
+            background-color: var(--primary-gold);
             color: white;
         }
         
@@ -118,8 +118,8 @@
         }
         
         .search-bar:focus {
-            border-color: var(--primary-pink);
-            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
         }
     </style>
 </head>
@@ -130,8 +130,8 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="text-2xl font-bold text-primary">
-                        <i class="fas fa-gem mr-2"></i>
-                        Naheed Beauty
+                        <i class="fas fa-bolt mr-2"></i>
+                        LibirthStore
                     </div>
                 </div>
                 
@@ -167,8 +167,8 @@
         <!-- Hero Section -->
         <section class="hero-gradient text-white py-20">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <h1 class="text-5xl font-bold mb-6">Discover Your Beauty</h1>
-                <p class="text-xl mb-8 opacity-90">Premium cosmetics and skincare products for the modern woman</p>
+                <h1 class="text-5xl font-bold mb-6">Premium Phone Chargers</h1>
+                <p class="text-xl mb-8 opacity-90">Fast charging, original quality phone chargers with online payment</p>
                 <button onclick="showPage('shop')" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg">
                     Shop Now <i class="fas fa-arrow-right ml-2"></i>
                 </button>
@@ -180,25 +180,25 @@
             <div class="max-w-7xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Shop by Category</h2>
                 <div class="grid md:grid-cols-4 gap-6">
-                    <div class="category-card bg-light-pink p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('skincare')">
-                        <i class="fas fa-spa text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Skincare</h3>
-                        <p class="text-gray-600 mt-2">Nourish & glow</p>
+                    <div class="category-card bg-light-gold p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('chargers')">
+                        <i class="fas fa-bolt text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Chargers</h3>
+                        <p class="text-gray-600 mt-2">Fast & reliable</p>
                     </div>
-                    <div class="category-card bg-rose-gold p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('makeup')">
-                        <i class="fas fa-palette text-4xl text-white mb-4"></i>
-                        <h3 class="text-xl font-semibold text-white">Makeup</h3>
-                        <p class="text-white mt-2">Express yourself</p>
+                    <div class="category-card bg-light-gold p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('cables')">
+                        <i class="fas fa-plug text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Cables</h3>
+                        <p class="text-gray-600 mt-2">Durable & braided</p>
                     </div>
-                    <div class="category-card bg-cream p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('fragrance')">
-                        <i class="fas fa-spray-can text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Fragrance</h3>
-                        <p class="text-gray-600 mt-2">Signature scents</p>
+                    <div class="category-card bg-light-gold p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('wireless')">
+                        <i class="fas fa-charging-station text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Wireless</h3>
+                        <p class="text-gray-600 mt-2">Cord-free charging</p>
                     </div>
-                    <div class="category-card bg-light-pink p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('haircare')">
-                        <i class="fas fa-cut text-4xl text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Hair Care</h3>
-                        <p class="text-gray-600 mt-2">Beautiful hair</p>
+                    <div class="category-card bg-light-gold p-8 rounded-xl text-center hover:shadow-lg transition-all cursor-pointer" onclick="filterByCategory('powerbank')">
+                        <i class="fas fa-battery-full text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Power Banks</h3>
+                        <p class="text-gray-600 mt-2">On-the-go power</p>
                     </div>
                 </div>
             </div>
@@ -215,13 +215,13 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="bg-primary py-16 text-white">
+        <section class="bg-dark py-16 text-white">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Stay Beautiful</h2>
-                <p class="text-xl mb-8 opacity-90">Subscribe to our newsletter for exclusive offers and beauty tips</p>
+                <h2 class="text-3xl font-bold mb-4">Stay Charged</h2>
+                <p class="text-xl mb-8 opacity-90">Subscribe for exclusive offers and new product alerts</p>
                 <div class="flex max-w-md mx-auto">
                     <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg text-gray-800">
-                    <button class="bg-dark-pink px-6 py-3 rounded-r-lg font-semibold hover:bg-opacity-90 transition-all">
+                    <button class="bg-primary text-dark px-6 py-3 rounded-r-lg font-semibold hover:bg-opacity-90 transition-all">
                         Subscribe
                     </button>
                 </div>
@@ -247,10 +247,10 @@
             <div class="mb-8">
                 <div class="flex flex-wrap gap-2">
                     <button class="category-filter px-4 py-2 rounded-lg border active" onclick="filterProducts('all')">All</button>
-                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('skincare')">Skincare</button>
-                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('makeup')">Makeup</button>
-                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('fragrance')">Fragrance</button>
-                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('haircare')">Hair Care</button>
+                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('chargers')">Chargers</button>
+                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('cables')">Cables</button>
+                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('wireless')">Wireless</button>
+                    <button class="category-filter px-4 py-2 rounded-lg border" onclick="filterProducts('powerbank')">Power Banks</button>
                 </div>
             </div>
 
@@ -268,53 +268,53 @@
             
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-light-pink h-48 flex items-center justify-center">
-                        <i class="fas fa-spa text-6xl text-primary"></i>
+                    <div class="bg-light-gold h-48 flex items-center justify-center">
+                        <i class="fas fa-bolt text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Skincare</h3>
-                        <p class="text-gray-600 mb-4">Complete skincare solutions for all skin types. From cleansers to serums, find everything you need for healthy, glowing skin.</p>
-                        <button onclick="filterByCategory('skincare')" class="btn-primary text-white px-6 py-2 rounded-lg">
-                            Shop Skincare
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Chargers</h3>
+                        <p class="text-gray-600 mb-4">Fast charging solutions for all your devices. 20W to 100W GaN chargers available.</p>
+                        <button onclick="filterByCategory('chargers')" class="btn-primary text-white px-6 py-2 rounded-lg">
+                            Shop Chargers
                         </button>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-rose-gold h-48 flex items-center justify-center">
-                        <i class="fas fa-palette text-6xl text-white"></i>
+                    <div class="bg-light-gold h-48 flex items-center justify-center">
+                        <i class="fas fa-plug text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Makeup</h3>
-                        <p class="text-gray-600 mb-4">Professional makeup products to enhance your natural beauty. From foundation to lipstick, create any look you desire.</p>
-                        <button onclick="filterByCategory('makeup')" class="btn-primary text-white px-6 py-2 rounded-lg">
-                            Shop Makeup
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Cables</h3>
+                        <p class="text-gray-600 mb-4">Durable, braided USB-C and Lightning cables for fast data transfer and charging.</p>
+                        <button onclick="filterByCategory('cables')" class="btn-primary text-white px-6 py-2 rounded-lg">
+                            Shop Cables
                         </button>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-cream h-48 flex items-center justify-center">
-                        <i class="fas fa-spray-can text-6xl text-primary"></i>
+                    <div class="bg-light-gold h-48 flex items-center justify-center">
+                        <i class="fas fa-charging-station text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Fragrance</h3>
-                        <p class="text-gray-600 mb-4">Luxurious fragrances for every occasion. Discover your signature scent from our curated collection of perfumes.</p>
-                        <button onclick="filterByCategory('fragrance')" class="btn-primary text-white px-6 py-2 rounded-lg">
-                            Shop Fragrance
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Wireless Chargers</h3>
+                        <p class="text-gray-600 mb-4">Qi-certified wireless charging pads for convenient cord-free power.</p>
+                        <button onclick="filterByCategory('wireless')" class="btn-primary text-white px-6 py-2 rounded-lg">
+                            Shop Wireless
                         </button>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="bg-light-pink h-48 flex items-center justify-center">
-                        <i class="fas fa-cut text-6xl text-primary"></i>
+                    <div class="bg-light-gold h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Hair Care</h3>
-                        <p class="text-gray-600 mb-4">Professional hair care products for healthy, beautiful hair. Shampoos, conditioners, and styling products for all hair types.</p>
-                        <button onclick="filterByCategory('haircare')" class="btn-primary text-white px-6 py-2 rounded-lg">
-                            Shop Hair Care
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Power Banks</h3>
+                        <p class="text-gray-600 mb-4">Portable power banks to keep your devices charged on the go.</p>
+                        <button onclick="filterByCategory('powerbank')" class="btn-primary text-white px-6 py-2 rounded-lg">
+                            Shop Power Banks
                         </button>
                     </div>
                 </div>
@@ -325,93 +325,56 @@
     <!-- About Page -->
     <div id="aboutPage" class="page-section">
         <div class="max-w-6xl mx-auto px-4 py-8">
-            <!-- Hero Section -->
             <div class="text-center mb-16">
-                <h1 class="text-4xl font-bold text-gray-800 mb-6">About Naheed Beauty</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Empowering women through premium beauty products and exceptional customer service since 1978</p>
+                <h1 class="text-4xl font-bold text-gray-800 mb-6">About LibirthStore</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Pakistan's premium online electronics boutique — original, lab-tested charging gear</p>
             </div>
             
-            <!-- Story Section -->
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                 <div>
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
                     <p class="text-gray-600 mb-4">
-                        Founded in 1978, Naheed Beauty began as a small beauty salon with a vision to make premium beauty products accessible to every woman. Over four decades, we have grown into one of the most trusted beauty brands, known for our commitment to quality and innovation.
+                        LibirthStore was born from a simple idea: everyone deserves reliable, high-quality charging gear that won't let them down.
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Our journey started with a simple belief: every woman deserves to feel beautiful and confident. This philosophy continues to guide us as we curate the finest selection of skincare, makeup, fragrances, and hair care products from around the world.
+                        Every charger we ship goes through a quality check. No knock-offs, no surprises — just dependable charging gear that respects your phone and your time.
                     </p>
                     <p class="text-gray-600">
-                        Today, Naheed Beauty serves millions of customers across multiple countries, maintaining the same commitment to excellence that defined our humble beginnings.
+                        From PD-enabled fast chargers to MagSafe-style wireless pads, every product is hand-picked by people who actually use them daily.
                     </p>
                 </div>
-                <div class="bg-light-pink rounded-xl p-8">
+                <div class="bg-light-gold rounded-xl p-8">
                     <div class="text-center">
                         <i class="fas fa-award text-6xl text-primary mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">40+ Years</h3>
-                        <p class="text-gray-600">of Beauty Excellence</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">100% Original</h3>
+                        <p class="text-gray-600">Quality guaranteed</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Values Section -->
             <div class="bg-white rounded-xl shadow-lg p-8 mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Our Values</h2>
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Why Choose Us</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center">
-                        <div class="bg-light-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heart text-2xl text-primary"></i>
+                        <div class="bg-light-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shipping-fast text-2xl text-primary"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Quality First</h3>
-                        <p class="text-gray-600">We source only the finest ingredients and work with trusted brands to ensure exceptional quality in every product.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Free Delivery</h3>
+                        <p class="text-gray-600">Free delivery on orders above Rs. 3000</p>
                     </div>
                     <div class="text-center">
-                        <div class="bg-rose-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-users text-2xl text-white"></i>
+                        <div class="bg-light-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-primary"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Customer Focused</h3>
-                        <p class="text-gray-600">Your satisfaction is our priority. We provide personalized service and expert advice to help you find perfect products.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Original Quality</h3>
+                        <p class="text-gray-600">Lab-tested, genuine products</p>
                     </div>
                     <div class="text-center">
-                        <div class="bg-cream w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-leaf text-2xl text-primary"></i>
+                        <div class="bg-light-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl text-primary"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Sustainable Beauty</h3>
-                        <p class="text-gray-600">We're committed to environmental responsibility and offer eco-friendly products that don't compromise on effectiveness.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Section -->
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Meet Our Team</h2>
-                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Our passionate team of beauty experts, product specialists, and customer service professionals work together to bring you the best beauty experience.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="w-24 h-24 bg-light-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-user text-3xl text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sarah Ahmed</h3>
-                        <p class="text-primary font-medium mb-2">Founder & CEO</p>
-                        <p class="text-gray-600 text-sm">Visionary leader with 40+ years in the beauty industry</p>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="w-24 h-24 bg-rose-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-user text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Maria Khan</h3>
-                        <p class="text-primary font-medium mb-2">Head of Product</p>
-                        <p class="text-gray-600 text-sm">Expert in product curation and brand partnerships</p>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="w-24 h-24 bg-cream rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-user text-3xl text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Aisha Ali</h3>
-                        <p class="text-primary font-medium mb-2">Beauty Consultant</p>
-                        <p class="text-gray-600 text-sm">Certified beauty expert and makeup artist</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Same-Day Dispatch</h3>
+                        <p class="text-gray-600">Orders ship within 24 hours</p>
                     </div>
                 </div>
             </div>
@@ -427,7 +390,6 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Contact Form -->
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>
                     <form class="space-y-6">
@@ -449,8 +411,7 @@
                                 <option>General Inquiry</option>
                                 <option>Product Question</option>
                                 <option>Order Support</option>
-                                <option>Beauty Consultation</option>
-                                <option>Partnership</option>
+                                <option>Wholesale Inquiry</option>
                             </select>
                         </div>
                         <div>
@@ -463,59 +424,54 @@
                     </form>
                 </div>
                 
-                <!-- Contact Information -->
                 <div>
-                    <div class="bg-primary text-white rounded-xl p-8 mb-6">
+                    <div class="bg-primary text-dark rounded-xl p-8 mb-6">
                         <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <i class="fas fa-map-marker-alt text-xl mr-4"></i>
                                 <div>
                                     <p class="font-medium">Main Store</p>
-                                    <p class="opacity-90">123 Beauty Street, Fashion District, Karachi, Pakistan</p>
+                                    <p class="opacity-90">Karachi, Pakistan</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-phone text-xl mr-4"></i>
                                 <div>
                                     <p class="font-medium">Phone</p>
-                                    <p class="opacity-90">+92 21 1234 5678</p>
+                                    <p class="opacity-90">+92 300 1234567</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-envelope text-xl mr-4"></i>
                                 <div>
                                     <p class="font-medium">Email</p>
-                                    <p class="opacity-90">info@naheedbeauty.com</p>
+                                    <p class="opacity-90">info@libirthstore.com</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-clock text-xl mr-4"></i>
                                 <div>
                                     <p class="font-medium">Store Hours</p>
-                                    <p class="opacity-90">Mon - Sat: 9:00 AM - 10:00 PM<br>Sunday: 11:00 AM - 8:00 PM</p>
+                                    <p class="opacity-90">Mon - Sat: 9:00 AM - 10:00 PM</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-light-pink rounded-xl p-8">
+                    <div class="bg-light-gold rounded-xl p-8">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Follow Us</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-pink transition-colors">
+                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-gold transition-colors">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-pink transition-colors">
+                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-gold transition-colors">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-pink transition-colors">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-pink transition-colors">
-                                <i class="fab fa-tiktok"></i>
+                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-dark-gold transition-colors">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
-                        <p class="text-gray-600 mt-4 text-sm">Stay updated with our latest products, beauty tips, and exclusive offers!</p>
                     </div>
                 </div>
             </div>
@@ -529,353 +485,27 @@
             
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2">
-                    <div id="cartItems" class="space-y-4">
-                        <!-- Cart items will be populated by JavaScript -->
-                    </div>
-                    
+                    <div id="cartItems" class="space-y-4"></div>
                     <div id="emptyCart" class="text-center py-16" style="display: none;">
                         <i class="fas fa-shopping-cart text-6xl text-gray-300 mb-4"></i>
                         <h2 class="text-2xl font-bold text-gray-600 mb-2">Your cart is empty</h2>
                         <p class="text-gray-500 mb-6">Add some products to get started</p>
-                        <button onclick="showPage('shop')" class="btn-primary text-white px-6 py-3 rounded-lg">
-                            Continue Shopping
-                        </button>
+                        <button onclick="showPage('shop')" class="btn-primary text-white px-6 py-3 rounded-lg">Continue Shopping</button>
                     </div>
                 </div>
                 
                 <div class="lg:col-span-1">
                     <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
                         <h3 class="text-xl font-bold text-gray-800 mb-6">Order Summary</h3>
-                        
                         <div class="space-y-3 mb-6">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Subtotal</span>
-                                <span id="subtotal" class="font-medium">$0.00</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Shipping</span>
-                                <span class="font-medium">$5.99</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Tax</span>
-                                <span id="tax" class="font-medium">$0.00</span>
-                            </div>
+                            <div class="flex justify-between"><span class="text-gray-600">Subtotal</span><span id="subtotal">Rs. 0</span></div>
+                            <div class="flex justify-between"><span class="text-gray-600">Delivery</span><span>Rs. 150</span></div>
+                            <div class="flex justify-between"><span class="text-gray-600">COD Charges</span><span>Rs. 0</span></div>
                             <hr class="border-gray-200">
-                            <div class="flex justify-between text-lg font-bold">
-                                <span>Total</span>
-                                <span id="total" class="text-primary">$0.00</span>
-                            </div>
+                            <div class="flex justify-between text-lg font-bold"><span>Total</span><span id="total" class="text-primary">Rs. 0</span></div>
                         </div>
-                        
-                        <button onclick="checkout()" class="w-full btn-primary text-white py-3 rounded-lg font-semibold mb-3">
-                            Proceed to Checkout
-                        </button>
-                        
-                        <button onclick="showPage('shop')" class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50">
-                            Continue Shopping
-                        </button>
-                        
-                        <div class="mt-6 pt-6 border-t border-gray-200">
-                            <h4 class="font-semibold text-gray-800 mb-3">Promo Code</h4>
-                            <div class="flex">
-                                <input type="text" placeholder="Enter code" class="flex-1 px-3 py-2 border rounded-l-lg focus:outline-none focus:border-primary">
-                                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-r-lg hover:bg-gray-300">Apply</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Account Page -->
-    <div id="accountPage" class="page-section">
-        <div class="max-w-6xl mx-auto px-4 py-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-8">My Account</h1>
-            
-            <div class="grid lg:grid-cols-4 gap-8">
-                <div class="lg:col-span-1">
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-light-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-user text-2xl text-primary"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Welcome Back!</h3>
-                            <p class="text-gray-600">Manage your account</p>
-                        </div>
-                        
-                        <nav class="space-y-2">
-                            <a href="#" class="account-nav-link flex items-center p-3 text-gray-700 hover:bg-light-pink rounded-lg active" onclick="showAccountSection('profile')">
-                                <i class="fas fa-user mr-3"></i>
-                                Profile Information
-                            </a>
-                            <a href="#" class="account-nav-link flex items-center p-3 text-gray-700 hover:bg-light-pink rounded-lg" onclick="showAccountSection('orders')">
-                                <i class="fas fa-shopping-bag mr-3"></i>
-                                Order History
-                            </a>
-                            <a href="#" class="account-nav-link flex items-center p-3 text-gray-700 hover:bg-light-pink rounded-lg" onclick="showAccountSection('addresses')">
-                                <i class="fas fa-map-marker-alt mr-3"></i>
-                                Addresses
-                            </a>
-                            <a href="#" class="account-nav-link flex items-center p-3 text-gray-700 hover:bg-light-pink rounded-lg" onclick="showAccountSection('wishlist')">
-                                <i class="fas fa-heart mr-3"></i>
-                                Wishlist
-                            </a>
-                            <a href="#" class="account-nav-link flex items-center p-3 text-gray-700 hover:bg-light-pink rounded-lg" onclick="showAccountSection('preferences')">
-                                <i class="fas fa-cog mr-3"></i>
-                                Preferences
-                            </a>
-                        </nav>
-                    </div>
-                </div>
-                
-                <div class="lg:col-span-3">
-                    <!-- Profile Section -->
-                    <div id="profileSection" class="account-section">
-                        <div class="bg-white rounded-xl shadow-lg p-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Profile Information</h2>
-                            
-                            <form class="space-y-6">
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-gray-700 font-medium mb-2">First Name</label>
-                                        <input type="text" value="Sarah" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-primary">
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-medium mb-2">Last Name</label>
-                                        <input type="text" value="Johnson" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-primary">
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-gray-700 font-medium mb-2">Email Address</label>
-                                    <input type="email" value="sarah.johnson@email.com" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-primary">
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                                    <input type="tel" value="+92 300 1234567" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-primary">
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-gray-700 font-medium mb-2">Date of Birth</label>
-                                    <input type="date" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-primary">
-                                </div>
-                                
-                                <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg">
-                                    Update Profile
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    
-                    <!-- Orders Section -->
-                    <div id="ordersSection" class="account-section" style="display: none;">
-                        <div class="bg-white rounded-xl shadow-lg p-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Order History</h2>
-                            
-                            <div class="space-y-4">
-                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                                    <div class="flex justify-between items-start mb-3">
-                                        <div>
-                                            <h4 class="font-semibold text-gray-800">Order #12345</h4>
-                                            <p class="text-gray-600 text-sm">Placed on March 15, 2024</p>
-                                        </div>
-                                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Delivered</span>
-                                    </div>
-                                    <p class="text-gray-700 mb-2">3 items • Total: $127.50</p>
-                                    <button class="text-primary hover:text-dark-pink font-medium">View Details</button>
-                                </div>
-                                
-                                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                                    <div class="flex justify-between items-start mb-3">
-                                        <div>
-                                            <h4 class="font-semibold text-gray-800">Order #12344</h4>
-                                            <p class="text-gray-600 text-sm">Placed on March 10, 2024</p>
-                                        </div>
-                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Shipped</span>
-                                    </div>
-                                    <p class="text-gray-700 mb-2">2 items • Total: $89.99</p>
-                                    <button class="text-primary hover:text-dark-pink font-medium">Track Order</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Addresses Section -->
-                    <div id="addressesSection" class="account-section" style="display: none;">
-                        <div class="bg-white rounded-xl shadow-lg p-6">
-                            <div class="flex justify-between items-center mb-6">
-                                <h2 class="text-2xl font-bold text-gray-800">Saved Addresses</h2>
-                                <button class="btn-primary text-white px-4 py-2 rounded-lg">Add New Address</button>
-                            </div>
-                            
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="border rounded-lg p-4">
-                                    <div class="flex justify-between items-start mb-3">
-                                        <h4 class="font-semibold text-gray-800">Home</h4>
-                                        <span class="bg-primary text-white px-2 py-1 rounded text-xs">Default</span>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">
-                                        123 Main Street<br>
-                                        Apartment 4B<br>
-                                        Karachi, Sindh 12345<br>
-                                        Pakistan
-                                    </p>
-                                    <div class="flex space-x-2 mt-3">
-                                        <button class="text-primary hover:text-dark-pink text-sm">Edit</button>
-                                        <button class="text-red-500 hover:text-red-700 text-sm">Delete</button>
-                                    </div>
-                                </div>
-                                
-                                <div class="border rounded-lg p-4">
-                                    <h4 class="font-semibold text-gray-800 mb-3">Office</h4>
-                                    <p class="text-gray-600 text-sm">
-                                        456 Business Plaza<br>
-                                        Floor 10, Suite 1001<br>
-                                        Lahore, Punjab 54000<br>
-                                        Pakistan
-                                    </p>
-                                    <div class="flex space-x-2 mt-3">
-                                        <button class="text-primary hover:text-dark-pink text-sm">Edit</button>
-                                        <button class="text-red-500 hover:text-red-700 text-sm">Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Wishlist Section -->
-                    <div id="wishlistSection" class="account-section" style="display: none;">
-                        <div class="bg-white rounded-xl shadow-lg p-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-6">My Wishlist</h2>
-                            
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="border rounded-lg p-4">
-                                    <div class="w-full h-32 bg-light-pink rounded-lg mb-4 flex items-center justify-center">
-                                        <i class="fas fa-image text-3xl text-primary"></i>
-                                    </div>
-                                    <h4 class="font-semibold text-gray-800 mb-2">Premium Face Serum</h4>
-                                    <p class="text-primary font-bold mb-3">$45.99</p>
-                                    <div class="flex space-x-2">
-                                        <button class="btn-primary text-white px-4 py-2 rounded-lg flex-1 text-sm">Add to Cart</button>
-                                        <button class="border border-gray-300 text-gray-700 px-3 py-2 rounded-lg">
-                                            <i class="fas fa-trash text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <div class="border rounded-lg p-4">
-                                    <div class="w-full h-32 bg-rose-gold rounded-lg mb-4 flex items-center justify-center">
-                                        <i class="fas fa-image text-3xl text-white"></i>
-                                    </div>
-                                    <h4 class="font-semibold text-gray-800 mb-2">Luxury Lipstick Set</h4>
-                                    <p class="text-primary font-bold mb-3">$89.99</p>
-                                    <div class="flex space-x-2">
-                                        <button class="btn-primary text-white px-4 py-2 rounded-lg flex-1 text-sm">Add to Cart</button>
-                                        <button class="border border-gray-300 text-gray-700 px-3 py-2 rounded-lg">
-                                            <i class="fas fa-trash text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Preferences Section -->
-                    <div id="preferencesSection" class="account-section" style="display: none;">
-                        <div class="bg-white rounded-xl shadow-lg p-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Account Preferences</h2>
-                            
-                            <div class="space-y-6">
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Notifications</h3>
-                                    <div class="space-y-3">
-                                        <label class="flex items-center">
-                                            <input type="checkbox" checked class="w-4 h-4 text-primary">
-                                            <span class="ml-3 text-gray-700">Email notifications for new products</span>
-                                        </label>
-                                        <label class="flex items-center">
-                                            <input type="checkbox" checked class="w-4 h-4 text-primary">
-                                            <span class="ml-3 text-gray-700">SMS notifications for order updates</span>
-                                        </label>
-                                        <label class="flex items-center">
-                                            <input type="checkbox" class="w-4 h-4 text-primary">
-                                            <span class="ml-3 text-gray-700">Marketing emails and promotions</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                
-                                <hr class="border-gray-200">
-                                
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Privacy Settings</h3>
-                                    <div class="space-y-3">
-                                        <label class="flex items-center">
-                                            <input type="checkbox" checked class="w-4 h-4 text-primary">
-                                            <span class="ml-3 text-gray-700">Share data for personalized recommendations</span>
-                                        </label>
-                                        <label class="flex items-center">
-                                            <input type="checkbox" class="w-4 h-4 text-primary">
-                                            <span class="ml-3 text-gray-700">Allow third-party marketing</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                
-                                <button class="btn-primary text-white px-6 py-3 rounded-lg">
-                                    Save Preferences
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Modal -->
-    <div id="productModal" class="modal">
-        <div class="bg-white rounded-xl max-w-4xl w-full mx-4 max-h-screen overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-800">Product Details</h2>
-                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
-                        <i class="fas fa-times text-xl"></i>
-                    </button>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <div id="modalProductImage" class="w-full h-80 bg-light-pink rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-image text-6xl text-primary"></i>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 id="modalProductName" class="text-2xl font-bold text-gray-800 mb-4"></h3>
-                        <p id="modalProductPrice" class="text-3xl font-bold text-primary mb-6"></p>
-                        
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-gray-800 mb-2">Description</h4>
-                            <p id="modalProductDescription" class="text-gray-600"></p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-gray-800 mb-2">Key Benefits</h4>
-                            <ul id="modalProductBenefits" class="text-gray-600 space-y-1">
-                                <!-- Benefits will be populated by JavaScript -->
-                            </ul>
-                        </div>
-                        
-                        <div class="flex space-x-4">
-                            <button onclick="addToCartFromModal()" class="btn-primary text-white px-6 py-3 rounded-lg flex-1">
-                                <i class="fas fa-cart-plus mr-2"></i>
-                                Add to Cart
-                            </button>
-                            <button onclick="addToWishlist()" class="border border-gray-300 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-50">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
+                        <button onclick="checkout()" class="w-full btn-primary text-white py-3 rounded-lg font-semibold">Proceed to Checkout</button>
+                        <button onclick="showPage('shop')" class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold mt-3 hover:bg-gray-50">Continue Shopping</button>
                     </div>
                 </div>
             </div>
@@ -883,497 +513,131 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
+    <footer class="bg-dark text-white py-12 mt-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <div class="text-2xl font-bold text-primary mb-4">
-                        <i class="fas fa-gem mr-2"></i>
-                        Naheed Beauty
-                    </div>
-                    <p class="text-gray-300 mb-4">Your trusted partner in beauty since 1978. Discover premium cosmetics and skincare products.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-tiktok"></i></a>
-                    </div>
+                    <div class="text-2xl font-bold text-primary mb-4"><i class="fas fa-bolt mr-2"></i>LibirthStore</div>
+                    <p class="text-gray-300 mb-4">Premium phone chargers, cables & wireless accessories — original quality, fast delivery.</p>
                 </div>
-                
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" onclick="showPage('home')" class="hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="#" onclick="showPage('shop')" class="hover:text-primary transition-colors">Shop</a></li>
-                        <li><a href="#" onclick="showPage('categories')" class="hover:text-primary transition-colors">Categories</a></li>
-                        <li><a href="#" onclick="showPage('about')" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="#" onclick="showPage('contact')" class="hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" onclick="showPage('home')" class="hover:text-primary">Home</a></li>
+                        <li><a href="#" onclick="showPage('shop')" class="hover:text-primary">Shop</a></li>
+                        <li><a href="#" onclick="showPage('about')" class="hover:text-primary">About</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="hover:text-primary">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Categories</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" onclick="filterByCategory('skincare')" class="hover:text-primary transition-colors">Skincare</a></li>
-                        <li><a href="#" onclick="filterByCategory('makeup')" class="hover:text-primary transition-colors">Makeup</a></li>
-                        <li><a href="#" onclick="filterByCategory('fragrance')" class="hover:text-primary transition-colors">Fragrance</a></li>
-                        <li><a href="#" onclick="filterByCategory('haircare')" class="hover:text-primary transition-colors">Hair Care</a></li>
+                        <li><a href="#" onclick="filterByCategory('chargers')" class="hover:text-primary">Chargers</a></li>
+                        <li><a href="#" onclick="filterByCategory('cables')" class="hover:text-primary">Cables</a></li>
+                        <li><a href="#" onclick="filterByCategory('wireless')" class="hover:text-primary">Wireless</a></li>
+                        <li><a href="#" onclick="filterByCategory('powerbank')" class="hover:text-primary">Power Banks</a></li>
                     </ul>
                 </div>
-                
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><i class="fas fa-phone mr-2"></i>+92 21 1234 5678</li>
-                        <li><i class="fas fa-envelope mr-2"></i>info@naheedbeauty.com</li>
-                        <li><i class="fas fa-clock mr-2"></i>Mon-Sat: 9AM-10PM</li>
+                        <li><i class="fab fa-whatsapp mr-2"></i>+92 300 1234567</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@libirthstore.com</li>
                         <li><i class="fas fa-map-marker-alt mr-2"></i>Karachi, Pakistan</li>
                     </ul>
                 </div>
             </div>
-            
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2024 Naheed Beauty. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2024 LibirthStore. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Sample product data
         const products = [
-            {
-                id: 1,
-                name: "Hydrating Face Serum",
-                price: 45.99,
-                category: "skincare",
-                image: "skincare",
-                description: "A powerful hydrating serum with hyaluronic acid and vitamin E for deep moisturization.",
-                benefits: ["Deep hydration", "Anti-aging properties", "Suitable for all skin types", "Paraben-free formula"]
-            },
-            {
-                id: 2,
-                name: "Matte Lipstick Collection",
-                price: 32.50,
-                category: "makeup",
-                image: "makeup",
-                description: "Long-lasting matte lipsticks in 12 stunning shades for every occasion.",
-                benefits: ["16-hour wear", "Non-drying formula", "Cruelty-free", "Highly pigmented"]
-            },
-            {
-                id: 3,
-                name: "Luxury Rose Perfume",
-                price: 89.99,
-                category: "fragrance",
-                image: "fragrance",
-                description: "An elegant rose fragrance with notes of jasmine and vanilla for a sophisticated scent.",
-                benefits: ["Long-lasting fragrance", "Premium ingredients", "Elegant packaging", "Perfect for gifting"]
-            },
-            {
-                id: 4,
-                name: "Nourishing Hair Mask",
-                price: 28.75,
-                category: "haircare",
-                image: "haircare",
-                description: "Intensive hair treatment mask with argan oil and keratin for damaged hair repair.",
-                benefits: ["Repairs damaged hair", "Adds shine", "Strengthens hair", "Natural ingredients"]
-            },
-            {
-                id: 5,
-                name: "Vitamin C Brightening Cream",
-                price: 52.00,
-                category: "skincare",
-                image: "skincare",
-                description: "Brightening day cream with vitamin C and SPF 30 protection for radiant skin.",
-                benefits: ["Brightens complexion", "SPF 30 protection", "Anti-oxidant rich", "Non-comedogenic"]
-            },
-            {
-                id: 6,
-                name: "Professional Makeup Brushes",
-                price: 75.50,
-                category: "makeup",
-                image: "makeup",
-                description: "Professional-grade makeup brush set with 15 brushes for flawless application.",
-                benefits: ["Synthetic bristles", "Professional quality", "Easy to clean", "Complete set"]
-            },
-            {
-                id: 7,
-                name: "Vanilla Orchid Eau de Parfum",
-                price: 65.99,
-                category: "fragrance",
-                image: "fragrance",
-                description: "Exotic vanilla and orchid fragrance with warm, sensual notes perfect for evening wear.",
-                benefits: ["Exotic scent", "Long-lasting", "Elegant bottle", "Premium quality"]
-            },
-            {
-                id: 8,
-                name: "Strengthening Shampoo",
-                price: 24.99,
-                category: "haircare",
-                image: "haircare",
-                description: "Sulfate-free strengthening shampoo with biotin and collagen for weak, brittle hair.",
-                benefits: ["Strengthens hair", "Sulfate-free", "Adds volume", "Color-safe"]
-            }
+            { id: 1, name: "Type-C 65W Fast Charger", price: 1299, category: "chargers", description: "Super fast 65W Type-C charger with PD support.", benefits: ["Fast charging", "PD 3.0 support", "Universal compatibility"] },
+            { id: 2, name: "iPhone Lightning 20W Charger", price: 1499, category: "chargers", description: "Apple compatible 20W lightning charger.", benefits: ["MFi certified", "Fast charging", "Compact design"] },
+            { id: 3, name: "2m Braided Type-C Cable", price: 599, category: "cables", description: "Durable 2m nylon braided cable.", benefits: ["Tangle-free", "Fast charging", "Data sync"] },
+            { id: 4, name: "15W Wireless Charger", price: 2499, category: "wireless", description: "Qi-certified 15W wireless pad.", benefits: ["Qi certified", "15W fast charging", "Sleek design"] },
+            { id: 5, name: "100W GaN Charger", price: 3499, category: "chargers", description: "Compact 100W GaN multi-port charger.", benefits: ["GaN technology", "3 ports", "Universal"] },
+            { id: 6, name: "20000mAh Power Bank", price: 2999, category: "powerbank", description: "Fast charging power bank with PD.", benefits: ["20000mAh", "PD fast charge", "Digital display"] }
         ];
 
         let cart = [];
-        let currentProduct = null;
         let filteredProducts = products;
 
-        // Page navigation
         function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-section').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show selected page
+            document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
             document.getElementById(pageId + 'Page').classList.add('active');
-            
-            // Update navigation
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            // Initialize page content
-            if (pageId === 'home') {
-                initHomePage();
-            } else if (pageId === 'shop') {
-                initShopPage();
-            } else if (pageId === 'cart') {
-                updateCartDisplay();
-            }
+            if (pageId === 'home') initHomePage();
+            else if (pageId === 'shop') displayProducts(products);
+            else if (pageId === 'cart') updateCartDisplay();
         }
 
-        // Initialize home page
         function initHomePage() {
-            const featuredContainer = document.getElementById('featuredProducts');
-            featuredContainer.innerHTML = products.slice(0, 4).map(product => createProductCard(product)).join('');
+            document.getElementById('featuredProducts').innerHTML = products.slice(0, 4).map(p => createProductCard(p)).join('');
         }
 
-        // Initialize shop page
-        function initShopPage() {
-            displayProducts(products);
+        function createProductCard(p) {
+            return `<div class="product-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="showProductModal(${p.id})">
+                <div class="bg-light-gold h-48 flex items-center justify-center"><i class="fas fa-bolt text-4xl text-primary"></i></div>
+                <div class="p-4"><h3 class="font-semibold text-gray-800 mb-2">${p.name}</h3><p class="text-primary font-bold text-lg mb-3">Rs. ${p.price.toFixed(2)}</p>
+                <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full btn-primary text-white py-2 rounded-lg font-medium"><i class="fas fa-cart-plus mr-2"></i>Add to Cart</button></div></div>`;
         }
 
-        // Create product card HTML
-        function createProductCard(product) {
-            const imageClass = getImageClass(product.category);
-            return `
-                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="showProductModal(${product.id})">
-                    <div class="${imageClass} h-48 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl ${getImageIconColor(product.category)}"></i>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-gray-800 mb-2">${product.name}</h3>
-                        <p class="text-primary font-bold text-lg mb-3">$${product.price.toFixed(2)}</p>
-                        <button onclick="event.stopPropagation(); addToCart(${product.id})" 
-                                class="w-full btn-primary text-white py-2 rounded-lg font-medium">
-                            <i class="fas fa-cart-plus mr-2"></i>Add to Cart
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Get image class based on category
-        function getImageClass(category) {
-            const classes = {
-                'skincare': 'bg-light-pink',
-                'makeup': 'bg-rose-gold',
-                'fragrance': 'bg-cream',
-                'haircare': 'bg-light-pink'
-            };
-            return classes[category] || 'bg-light-pink';
-        }
-
-        // Get image icon color based on category
-        function getImageIconColor(category) {
-            const colors = {
-                'skincare': 'text-primary',
-                'makeup': 'text-white',
-                'fragrance': 'text-primary',
-                'haircare': 'text-primary'
-            };
-            return colors[category] || 'text-primary';
-        }
-
-        // Display products
         function displayProducts(productsToShow) {
-            const container = document.getElementById('productsGrid');
-            container.innerHTML = productsToShow.map(product => createProductCard(product)).join('');
+            document.getElementById('productsGrid').innerHTML = productsToShow.map(p => createProductCard(p)).join('');
         }
 
-        // Filter products
         function filterProducts(category) {
-            // Update filter buttons
-            document.querySelectorAll('.category-filter').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            if (category === 'all') {
-                filteredProducts = products;
-            } else {
-                filteredProducts = products.filter(product => product.category === category);
-            }
-            
+            filteredProducts = category === 'all' ? products : products.filter(p => p.category === category);
             displayProducts(filteredProducts);
         }
 
-        // Filter by category and show shop page
-        function filterByCategory(category) {
-            showPage('shop');
-            setTimeout(() => {
-                filterProducts(category);
-                // Update active filter button
-                document.querySelectorAll('.category-filter').forEach(btn => {
-                    btn.classList.remove('active');
-                    if (btn.textContent.toLowerCase().includes(category) || 
-                        (category === 'skincare' && btn.textContent === 'Skincare') ||
-                        (category === 'makeup' && btn.textContent === 'Makeup') ||
-                        (category === 'fragrance' && btn.textContent === 'Fragrance') ||
-                        (category === 'haircare' && btn.textContent === 'Hair Care')) {
-                        btn.classList.add('active');
-                    }
-                });
-            }, 100);
-        }
+        function filterByCategory(category) { showPage('shop'); setTimeout(() => filterProducts(category), 100); }
 
-        // Search products
         function searchProducts() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            filteredProducts = products.filter(product => 
-                product.name.toLowerCase().includes(query) ||
-                product.category.toLowerCase().includes(query)
-            );
-            displayProducts(filteredProducts);
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            displayProducts(products.filter(p => p.name.toLowerCase().includes(q)));
         }
 
-        // Sort products
         function sortProducts() {
             const sortBy = document.getElementById('sortSelect').value;
-            let sortedProducts = [...filteredProducts];
-            
-            switch(sortBy) {
-                case 'name':
-                    sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-                    break;
-                case 'price-low':
-                    sortedProducts.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price-high':
-                    sortedProducts.sort((a, b) => b.price - a.price);
-                    break;
-            }
-            
-            displayProducts(sortedProducts);
+            let sorted = [...filteredProducts];
+            if (sortBy === 'price-low') sorted.sort((a,b) => a.price - b.price);
+            else if (sortBy === 'price-high') sorted.sort((a,b) => b.price - a.price);
+            else sorted.sort((a,b) => a.name.localeCompare(b.name));
+            displayProducts(sorted);
         }
 
-        // Show product modal
-        function showProductModal(productId) {
-            const product = products.find(p => p.id === productId);
-            currentProduct = product;
-            
-            document.getElementById('modalProductName').textContent = product.name;
-            document.getElementById('modalProductPrice').textContent = `$${product.price.toFixed(2)}`;
-            document.getElementById('modalProductDescription').textContent = product.description;
-            
-            const benefitsList = document.getElementById('modalProductBenefits');
-            benefitsList.innerHTML = product.benefits.map(benefit => `<li>• ${benefit}</li>`).join('');
-            
-            const imageContainer = document.getElementById('modalProductImage');
-            imageContainer.className = `w-full h-80 ${getImageClass(product.category)} rounded-lg flex items-center justify-center mb-4`;
-            imageContainer.innerHTML = `<i class="fas fa-image text-6xl ${getImageIconColor(product.category)}"></i>`;
-            
+        function showProductModal(id) {
+            const p = products.find(x => x.id === id);
+            window.currentProduct = p;
+            document.getElementById('modalProductName').innerHTML = p.name;
+            document.getElementById('modalProductPrice').innerHTML = `Rs. ${p.price.toFixed(2)}`;
+            document.getElementById('modalProductDescription').innerHTML = p.description;
             document.getElementById('productModal').classList.add('active');
         }
 
-        // Close modal
-        function closeModal() {
-            document.getElementById('productModal').classList.remove('active');
-        }
-
-        // Add to cart
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ ...product, quantity: 1 });
-            }
-            
+        function addToCart(id) {
+            const p = products.find(x => x.id === id);
+            const existing = cart.find(x => x.id === id);
+            if (existing) existing.quantity++;
+            else cart.push({...p, quantity: 1});
             updateCartCount();
             showNotification('Product added to cart!');
         }
 
-        // Add to cart from modal
-        function addToCartFromModal() {
-            if (currentProduct) {
-                addToCart(currentProduct.id);
-                closeModal();
-            }
-        }
-
-        // Update cart count
         function updateCartCount() {
-            const count = cart.reduce((total, item) => total + item.quantity, 0);
-            document.getElementById('cartCount').textContent = count;
+            document.getElementById('cartCount').innerText = cart.reduce((s,i) => s + i.quantity, 0);
         }
 
-        // Update cart display
         function updateCartDisplay() {
-            const cartItemsContainer = document.getElementById('cartItems');
-            const emptyCart = document.getElementById('emptyCart');
-            
-            if (cart.length === 0) {
-                cartItemsContainer.style.display = 'none';
-                emptyCart.style.display = 'block';
-                document.getElementById('subtotal').textContent = '$0.00';
-                document.getElementById('tax').textContent = '$0.00';
-                document.getElementById('total').textContent = '$5.99';
-                return;
-            }
-            
-            cartItemsContainer.style.display = 'block';
-            emptyCart.style.display = 'none';
-            
-            cartItemsContainer.innerHTML = cart.map(item => `
-                <div class="cart-item bg-white rounded-xl shadow-lg p-4 flex items-center">
-                    <div class="${getImageClass(item.category)} w-20 h-20 rounded-lg flex items-center justify-center mr-4">
-                        <i class="fas fa-image text-2xl ${getImageIconColor(item.category)}"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="font-semibold text-gray-800">${item.name}</h3>
-                        <p class="text-primary font-bold">$${item.price.toFixed(2)}</p>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <button onclick="updateQuantity(${item.id}, -1)" 
-                                class="w-8 h-8 border rounded-full flex items-center justify-center hover:bg-gray-100">
-                            <i class="fas fa-minus text-sm"></i>
-                        </button>
-                        <span class="w-8 text-center font-medium">${item.quantity}</span>
-                        <button onclick="updateQuantity(${item.id}, 1)" 
-                                class="w-8 h-8 border rounded-full flex items-center justify-center hover:bg-gray-100">
-                            <i class="fas fa-plus text-sm"></i>
-                        </button>
-                        <button onclick="removeFromCart(${item.id})" 
-                                class="ml-4 text-red-500 hover:text-red-700">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-            
-            updateCartSummary();
-        }
-
-        // Update quantity
-        function updateQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity += change;
-                if (item.quantity <= 0) {
-                    removeFromCart(productId);
-                } else {
-                    updateCartDisplay();
-                    updateCartCount();
-                }
-            }
-        }
-
-        // Remove from cart
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCartDisplay();
-            updateCartCount();
-        }
-
-        // Update cart summary
-        function updateCartSummary() {
-            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-            const tax = subtotal * 0.08; // 8% tax
-            const shipping = subtotal > 0 ? 5.99 : 0;
-            const total = subtotal + tax + shipping;
-            
-            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
-            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
-            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
-        }
-
-        // Checkout
-        function checkout() {
-            if (cart.length === 0) {
-                showNotification('Your cart is empty!');
-                return;
-            }
-            showNotification('Redirecting to checkout...');
-        }
-
-        // Account section navigation
-        function showAccountSection(sectionId) {
-            // Hide all account sections
-            document.querySelectorAll('.account-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show selected section
-            document.getElementById(sectionId + 'Section').style.display = 'block';
-            
-            // Update navigation
-            document.querySelectorAll('.account-nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
-
-        // Add to wishlist
-        function addToWishlist() {
-            showNotification('Product added to wishlist!');
-        }
-
-        // Show notification
-        function showNotification(message) {
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = 'fixed top-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform';
-            notification.innerHTML = `
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle mr-2"></i>
-                    <span>${message}</span>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Show notification
-            setTimeout(() => {
-                notification.classList.remove('translate-x-full');
-            }, 100);
-            
-            // Hide notification after 3 seconds
-            setTimeout(() => {
-                notification.classList.add('translate-x-full');
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 3000);
-        }
-
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            initHomePage();
-            updateCartCount();
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('productModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-    </script>
-</body>
-</html>
+            const container = document.getElementById('cartItems');
+            const empty = document.getElementById('emptyCart');
+            if (cart.length === 0) { container.style.display = 'none'; empty.style.display = 'block'; updateCartSummary(); return; }
+            container.style.display = 'block'; empty.style.display = 'none';
+            container.innerHTML = cart.map(i => `<div class="cart-item bg-white rounded-xl shadow-lg p-4 flex items-center"><div class="bg-light-gold w-20 h-20 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-bolt text-2xl text-primary"></i></div><div class="flex-1"><h3 class="font-semibold text-gray-800">${i.name}</h3><p class="text-primary font-bold">Rs. ${i.price.toFixed(2)}</p></div><div
+       
+             
+                      
